@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.safestring import mark_safe
-
+from phonenumber_field.modelfields import PhoneNumberField
 
 class Taxis(models.Model):
     STATUS = (('YANGI', 'YANGI'),
@@ -20,7 +20,7 @@ class Taxis(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     family_name = models.CharField(max_length=30)
-    phone = models.CharField(max_length=25)
+    phone = PhoneNumberField()
     address = models.CharField(max_length=255)
     profile_pic = models.ImageField(upload_to='image/')
     status = models.CharField(max_length=10, default='ESKI', choices=STATUS)
