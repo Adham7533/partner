@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-#    'crispy_forms',
+    'phonenumber_field',
 ]
 
 REST_FRAMEWORK = {
